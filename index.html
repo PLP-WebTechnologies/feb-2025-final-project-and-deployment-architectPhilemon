@@ -1,1 +1,96 @@
-"Hello World" 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Architect Philemon</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1>Architect Philemon</h1>
+    <nav>
+      <a href="#home">Studio</a>
+      <a href="#about">Philosophy</a>
+      <a href="#posts">Blueprints</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+      <button id="themeToggle">🌓</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home">
+      <h2>Designing Future Spaces</h2>
+      <p>Welcome to Architect Philemon — a blog inspired by structural elegance and thoughtful design. Explore concepts, creative works, and architecture in code.</p>
+      <button onclick="toggleMessage()">Click for Inspiration 💡</button>
+      <p id="surpriseText" style="display:none;">“Architecture is the learned game, correct and magnificent, of forms assembled in the light.” — Le Corbusier</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <h2>Design Philosophy</h2>
+      <p>I believe in clarity, structure, and impact — whether in buildings or in websites. This blog explores the intersection of clean code and beautiful design.</p>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="posts">
+      <h2>Blueprints</h2>
+      <input type="text" id="postSearch" placeholder="Search posts..." onkeyup="filterPosts()" />
+      <article>
+        <h3>Modular Design Systems</h3>
+        <p><strong>Date:</strong> April 6, 2025</p>
+        <p>Just like architecture, front-end development benefits from a modular, grid-based approach. Let's explore component libraries and design systems.</p>
+      </article>
+
+      <article>
+        <h3>From Sketch to Screen</h3>
+        <p><strong>Date:</strong> March 30, 2025</p>
+        <p>Taking an idea from sketch to responsive web layout is like turning a napkin concept into a real-world blueprint.</p>
+      </article>
+    </section>
+
+    <!-- Image Gallery Slider -->
+    <section id="gallery">
+      <h2>Inspiration Gallery</h2>
+      <div class="slider-container">
+        <div class="slider" id="slider">
+          
+          <img src="images\ChatGPT Image Apr 7, 2025, 12_04_17 AM.png" alt="fullstack" />
+        </div>
+        <button class="slider-btn" id="prevBtn">⟨</button>
+        <button class="slider-btn" id="nextBtn">⟩</button>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Let’s Collaborate</h2>
+      <form onsubmit="submitForm(event)">
+        <input type="text" id="name" name="name" placeholder="Your name" required />
+        <input type="email" id="email" name="email" placeholder="Your email" required />
+        <textarea id="message" name="message" placeholder="Message..." rows="4" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <p id="formResponse"></p>
+
+      <h3>Join the Newsletter</h3>
+      <form onsubmit="subscribe(event)">
+        <input type="email" id="newsletterEmail" placeholder="Your email" required />
+        <button type="submit">Subscribe</button>
+        <p id="newsletterMsg"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Architect Philemon — Building vision with code.</p>
+  </footer>
+
+  <button id="scrollTopBtn" title="Scroll to top">⬆️</button>
+</body>
+</html>
